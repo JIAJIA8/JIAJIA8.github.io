@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Just for test | JIAJIA</title>
+  <title>线程安全 | JIAJIA</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Just for a test ! one1$ test $开头">
+  <meta name="description" content="线程安全Introduction 线程安全就是在多线程操作同一个资源时，只允许一个线程对数据进行操作，并在结束后才能由下一个线程对数据进行操作。线程安全就是在多线程作用下不会出现数据不一致的情况，而非线程安全就可能出现数据不一致的情况。  Reflection 线程安全由于要确保数据的一致性，会对数据的读写进行控制，从而增加了系统的开销。所以在单线程环境中比非线程安全效率更低。  线程安全是通过线">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Just for test">
+<meta property="og:title" content="线程安全">
 <meta property="og:url" content="http://yoursite.com/2019/09/09/Just-for-test/index.html">
 <meta property="og:site_name" content="JIAJIA">
-<meta property="og:description" content="Just for a test ! one1$ test $开头">
+<meta property="og:description" content="线程安全Introduction 线程安全就是在多线程操作同一个资源时，只允许一个线程对数据进行操作，并在结束后才能由下一个线程对数据进行操作。线程安全就是在多线程作用下不会出现数据不一致的情况，而非线程安全就可能出现数据不一致的情况。  Reflection 线程安全由于要确保数据的一致性，会对数据的读写进行控制，从而增加了系统的开销。所以在单线程环境中比非线程安全效率更低。  线程安全是通过线">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-09T02:25:53.039Z">
+<meta property="og:updated_time" content="2019-09-15T12:15:34.814Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Just for test">
-<meta name="twitter:description" content="Just for a test ! one1$ test $开头">
+<meta name="twitter:title" content="线程安全">
+<meta name="twitter:description" content="线程安全Introduction 线程安全就是在多线程操作同一个资源时，只允许一个线程对数据进行操作，并在结束后才能由下一个线程对数据进行操作。线程安全就是在多线程作用下不会出现数据不一致的情况，而非线程安全就可能出现数据不一致的情况。  Reflection 线程安全由于要确保数据的一致性，会对数据的读写进行控制，从而增加了系统的开销。所以在单线程环境中比非线程安全效率更低。  线程安全是通过线">
   
     <link rel="alternative" href="/atom.xml" title="JIAJIA" type="application/atom+xml">
   
@@ -153,7 +153,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Just for test
+      线程安全
     </h1>
   
 
@@ -166,10 +166,21 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Just for a test !</p>
-<h1 id="one"><a href="#one" class="headerlink" title="one"></a>one</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ test $开头</span><br></pre></td></tr></table></figure>
-
-
+        <h1 id="线程安全"><a href="#线程安全" class="headerlink" title="线程安全"></a>线程安全</h1><h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><blockquote>
+<p>线程安全就是在多线程操作同一个资源时，只允许一个线程对数据进行操作，并在结束后才能由下一个线程对数据进行操作。<br>线程安全就是在多线程作用下不会出现数据不一致的情况，而非线程安全就可能出现数据不一致的情况。</p>
+</blockquote>
+<h2 id="Reflection"><a href="#Reflection" class="headerlink" title="Reflection"></a>Reflection</h2><ul>
+<li><p>线程安全由于要确保数据的一致性，会对数据的读写进行控制，从而增加了系统的开销。所以在单线程环境中比非线程安全效率更低。</p>
+</li>
+<li><p>线程安全是通过线程同步控制来实现的，也就是加synchronized关键字</p>
+</li>
+</ul>
+<h2 id="remind"><a href="#remind" class="headerlink" title="remind"></a>remind</h2><blockquote>
+<p>非线程安全！=不安全，非线程安全只是在多线程环境下不安全</p>
+</blockquote>
+<h2 id="Usual"><a href="#Usual" class="headerlink" title="Usual"></a>Usual</h2><pre><code>非线程安全的：ArrayList、LinkedList             线程安全的：Vector
+非线程安全的：HashMap                          线程安全的：HashTable
+非线程安全的：StringBuilder                    线程安全的：StringBuffer</code></pre>
       
 
       
