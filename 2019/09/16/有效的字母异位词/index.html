@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>有效的字母异位词（LeetCode-242） | JIAJIA</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="有效的字母异位词给定两个字符串 s 和 t ，编写一个函数来判断 t 是否是 s 的字母异位词。 示例 1: 12输入: s = &quot;anagram&quot;, t = &quot;nagaram&quot;输出: true  示例 2: 12输入: s = &quot;rat&quot;, t = &quot;car&quot;输出: false  说明:你可以假设字符串只包含小写字母。 解题：12345678910111213141516171819202122">
+  <meta name="description" content="有效的字母异位词给定两个字符串 s 和 t ，编写一个函数来判断 t 是否是 s 的字母异位词。 示例 1: 12输入: s = &quot;anagram&quot;, t = &quot;nagaram&quot;输出: true">
 <meta name="keywords" content="字符串,数组">
 <meta property="og:type" content="article">
 <meta property="og:title" content="有效的字母异位词（LeetCode-242）">
 <meta property="og:url" content="http://yoursite.com/2019/09/16/有效的字母异位词/index.html">
 <meta property="og:site_name" content="JIAJIA">
-<meta property="og:description" content="有效的字母异位词给定两个字符串 s 和 t ，编写一个函数来判断 t 是否是 s 的字母异位词。 示例 1: 12输入: s = &quot;anagram&quot;, t = &quot;nagaram&quot;输出: true  示例 2: 12输入: s = &quot;rat&quot;, t = &quot;car&quot;输出: false  说明:你可以假设字符串只包含小写字母。 解题：12345678910111213141516171819202122">
+<meta property="og:description" content="有效的字母异位词给定两个字符串 s 和 t ，编写一个函数来判断 t 是否是 s 的字母异位词。 示例 1: 12输入: s = &quot;anagram&quot;, t = &quot;nagaram&quot;输出: true">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-16T15:25:46.421Z">
+<meta property="og:updated_time" content="2019-09-16T16:37:17.934Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="有效的字母异位词（LeetCode-242）">
-<meta name="twitter:description" content="有效的字母异位词给定两个字符串 s 和 t ，编写一个函数来判断 t 是否是 s 的字母异位词。 示例 1: 12输入: s = &quot;anagram&quot;, t = &quot;nagaram&quot;输出: true  示例 2: 12输入: s = &quot;rat&quot;, t = &quot;car&quot;输出: false  说明:你可以假设字符串只包含小写字母。 解题：12345678910111213141516171819202122">
+<meta name="twitter:description" content="有效的字母异位词给定两个字符串 s 和 t ，编写一个函数来判断 t 是否是 s 的字母异位词。 示例 1: 12输入: s = &quot;anagram&quot;, t = &quot;nagaram&quot;输出: true">
   
     <link rel="alternative" href="/atom.xml" title="JIAJIA" type="application/atom+xml">
   
@@ -61,6 +61,10 @@
 				<li><a href="/">主页</a></li>
 	        
 				<li><a href="/archives">归档</a></li>
+	        
+				<li><a href="/tags">标签</a></li>
+	        
+				<li><a href="/categories">分类</a></li>
 	        
 			</ul>
 		</nav>
@@ -116,6 +120,10 @@
 			
 				
 			
+				
+			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -127,12 +135,16 @@
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
+					<li style="width: 25%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/archives">归档</a></li>
+					<li style="width: 25%"><a href="/archives">归档</a></li>
+		        
+					<li style="width: 25%"><a href="/tags">标签</a></li>
+		        
+					<li style="width: 25%"><a href="/categories">分类</a></li>
 		        
 				</ul>
 			</nav>
@@ -171,6 +183,7 @@
 <p><strong>示例 1:</strong></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: s = <span class="string">"anagram"</span>, t = <span class="string">"nagaram"</span></span><br><span class="line">输出: <span class="keyword">true</span></span><br></pre></td></tr></table></figure>
 
+<a id="more"></a>
 <p><strong>示例 2:</strong></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: s = <span class="string">"rat"</span>, t = <span class="string">"car"</span></span><br><span class="line">输出: <span class="keyword">false</span></span><br></pre></td></tr></table></figure>
 
@@ -293,6 +306,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2019/09/17/分类test/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          分类test
+        
+      </div>
+    </a>
   
   
     <a href="/2019/09/09/Just-for-test/" id="article-nav-older" class="article-nav-link-wrap">
