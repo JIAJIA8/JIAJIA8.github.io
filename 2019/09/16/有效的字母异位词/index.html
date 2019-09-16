@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>有效的字母异位词（LeetCode-242） | JIAJIA</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="给定两个字符串 s 和 t ，编写一个函数来判断 t 是否是 s 的字母异位词。 示例 1: 12输入: s = &quot;anagram&quot;, t = &quot;nagaram&quot;输出: true  示例 2: 12输入: s = &quot;rat&quot;, t = &quot;car&quot;输出: false  说明:你可以假设字符串只包含小写字母。 解题： 12345678910111213141516171819202122232425c">
+  <meta name="description" content="给定两个字符串 s 和 t ，编写一个函数来判断 t 是否是 s 的字母异位词。 示例 1: 12输入: s = &quot;anagram&quot;, t = &quot;nagaram&quot;输出: true  示例 2: 12输入: s = &quot;rat&quot;, t = &quot;car&quot;输出: false  说明:你可以假设字符串只包含小写字母。 解题：12345678910111213141516171819202122232425cl">
 <meta name="keywords" content="字符串,数组">
 <meta property="og:type" content="article">
 <meta property="og:title" content="有效的字母异位词（LeetCode-242）">
 <meta property="og:url" content="http://yoursite.com/2019/09/16/有效的字母异位词/index.html">
 <meta property="og:site_name" content="JIAJIA">
-<meta property="og:description" content="给定两个字符串 s 和 t ，编写一个函数来判断 t 是否是 s 的字母异位词。 示例 1: 12输入: s = &quot;anagram&quot;, t = &quot;nagaram&quot;输出: true  示例 2: 12输入: s = &quot;rat&quot;, t = &quot;car&quot;输出: false  说明:你可以假设字符串只包含小写字母。 解题： 12345678910111213141516171819202122232425c">
+<meta property="og:description" content="给定两个字符串 s 和 t ，编写一个函数来判断 t 是否是 s 的字母异位词。 示例 1: 12输入: s = &quot;anagram&quot;, t = &quot;nagaram&quot;输出: true  示例 2: 12输入: s = &quot;rat&quot;, t = &quot;car&quot;输出: false  说明:你可以假设字符串只包含小写字母。 解题：12345678910111213141516171819202122232425cl">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-16T15:01:35.634Z">
+<meta property="og:updated_time" content="2019-09-16T15:05:36.576Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="有效的字母异位词（LeetCode-242）">
-<meta name="twitter:description" content="给定两个字符串 s 和 t ，编写一个函数来判断 t 是否是 s 的字母异位词。 示例 1: 12输入: s = &quot;anagram&quot;, t = &quot;nagaram&quot;输出: true  示例 2: 12输入: s = &quot;rat&quot;, t = &quot;car&quot;输出: false  说明:你可以假设字符串只包含小写字母。 解题： 12345678910111213141516171819202122232425c">
+<meta name="twitter:description" content="给定两个字符串 s 和 t ，编写一个函数来判断 t 是否是 s 的字母异位词。 示例 1: 12输入: s = &quot;anagram&quot;, t = &quot;nagaram&quot;输出: true  示例 2: 12输入: s = &quot;rat&quot;, t = &quot;car&quot;输出: false  说明:你可以假设字符串只包含小写字母。 解题：12345678910111213141516171819202122232425cl">
   
     <link rel="alternative" href="/atom.xml" title="JIAJIA" type="application/atom+xml">
   
@@ -175,8 +175,7 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: s = <span class="string">"rat"</span>, t = <span class="string">"car"</span></span><br><span class="line">输出: <span class="keyword">false</span></span><br></pre></td></tr></table></figure>
 
 <p><strong>说明:</strong><br>你可以假设字符串只包含小写字母。</p>
-<p>解题：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isAnagram</span><span class="params">(String s, String t)</span> </span>&#123;</span><br><span class="line">       <span class="keyword">char</span>[] arr1 = s.toCharArray();</span><br><span class="line">        <span class="keyword">char</span>[] arr2 = t.toCharArray();</span><br><span class="line">        <span class="keyword">if</span>(arr1.length!=arr2.length)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span>[] count = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">26</span>];</span><br><span class="line">        <span class="keyword">int</span> index=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;arr1.length;i++)&#123;</span><br><span class="line">            index = arr1[i] - <span class="string">'a'</span>;</span><br><span class="line">            count[index]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;arr2.length;i++)&#123;</span><br><span class="line">            index = arr2[i] - <span class="string">'a'</span>;</span><br><span class="line">            count[index] --;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span> ;i&lt;count.length;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(count[i]!=<span class="number">0</span>)&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="解题："><a href="#解题：" class="headerlink" title="解题："></a>解题：</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isAnagram</span><span class="params">(String s, String t)</span> </span>&#123;</span><br><span class="line">       <span class="keyword">char</span>[] arr1 = s.toCharArray();</span><br><span class="line">        <span class="keyword">char</span>[] arr2 = t.toCharArray();</span><br><span class="line">        <span class="keyword">if</span>(arr1.length!=arr2.length)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span>[] count = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">26</span>];</span><br><span class="line">        <span class="keyword">int</span> index=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;arr1.length;i++)&#123;</span><br><span class="line">            index = arr1[i] - <span class="string">'a'</span>;</span><br><span class="line">            count[index]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;arr2.length;i++)&#123;</span><br><span class="line">            index = arr2[i] - <span class="string">'a'</span>;</span><br><span class="line">            count[index] --;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span> ;i&lt;count.length;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(count[i]!=<span class="number">0</span>)&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
 
       
@@ -324,7 +323,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#解题："><span class="toc-number">1.</span> <span class="toc-text">解题：</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -434,22 +433,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">centOS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">tomcat</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">LeetCode</a>
-              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">字符串</a>
