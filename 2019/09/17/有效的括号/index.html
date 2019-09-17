@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>有效的字母异位词（LeetCode-242） | JIAJIA</title>
+  <title>有效的括号（LeetCode-20） | JIAJIA</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="有效的字母异位词给定两个字符串 s 和 t ，编写一个函数来判断 t 是否是 s 的字母异位词。 示例 1: 12输入: s = &quot;anagram&quot;, t = &quot;nagaram&quot;输出: true">
-<meta name="keywords" content="字符串,数组">
+  <meta name="description" content="有效的括号给定一个只包括 ‘(‘，’)’，’{‘，’}’，’[‘，’]’ 的字符串，判断字符串是否有效。 有效字符串需满足：  左括号必须用相同类型的右括号闭合。 左括号必须以正确的顺序闭合。  注意空字符串可被认为是有效字符串。 示例 1: 12输入: &quot;()&quot;输出: true">
+<meta name="keywords" content="stack">
 <meta property="og:type" content="article">
-<meta property="og:title" content="有效的字母异位词（LeetCode-242）">
-<meta property="og:url" content="http://yoursite.com/2019/09/16/有效的字母异位词/index.html">
+<meta property="og:title" content="有效的括号（LeetCode-20）">
+<meta property="og:url" content="http://yoursite.com/2019/09/17/有效的括号/index.html">
 <meta property="og:site_name" content="JIAJIA">
-<meta property="og:description" content="有效的字母异位词给定两个字符串 s 和 t ，编写一个函数来判断 t 是否是 s 的字母异位词。 示例 1: 12输入: s = &quot;anagram&quot;, t = &quot;nagaram&quot;输出: true">
+<meta property="og:description" content="有效的括号给定一个只包括 ‘(‘，’)’，’{‘，’}’，’[‘，’]’ 的字符串，判断字符串是否有效。 有效字符串需满足：  左括号必须用相同类型的右括号闭合。 左括号必须以正确的顺序闭合。  注意空字符串可被认为是有效字符串。 示例 1: 12输入: &quot;()&quot;输出: true">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-16T16:37:17.934Z">
+<meta property="og:updated_time" content="2019-09-17T13:22:35.958Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="有效的字母异位词（LeetCode-242）">
-<meta name="twitter:description" content="有效的字母异位词给定两个字符串 s 和 t ，编写一个函数来判断 t 是否是 s 的字母异位词。 示例 1: 12输入: s = &quot;anagram&quot;, t = &quot;nagaram&quot;输出: true">
+<meta name="twitter:title" content="有效的括号（LeetCode-20）">
+<meta name="twitter:description" content="有效的括号给定一个只包括 ‘(‘，’)’，’{‘，’}’，’[‘，’]’ 的字符串，判断字符串是否有效。 有效字符串需满足：  左括号必须用相同类型的右括号闭合。 左括号必须以正确的顺序闭合。  注意空字符串可被认为是有效字符串。 示例 1: 12输入: &quot;()&quot;输出: true">
   
     <link rel="alternative" href="/atom.xml" title="JIAJIA" type="application/atom+xml">
   
@@ -147,36 +147,67 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-有效的字母异位词" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-有效的括号" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      有效的字母异位词（LeetCode-242）
+      有效的括号（LeetCode-20）
     </h1>
   
 
         
-        <a href="/2019/09/16/有效的字母异位词/" class="archive-article-date">
-  	<time datetime="2019-09-16T14:47:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-16</time>
+        <a href="/2019/09/17/有效的括号/" class="archive-article-date">
+  	<time datetime="2019-09-17T13:02:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-17</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="有效的字母异位词"><a href="#有效的字母异位词" class="headerlink" title="有效的字母异位词"></a>有效的字母异位词</h1><p>给定两个字符串 s 和 t ，编写一个函数来判断 t 是否是 s 的字母异位词。</p>
+        <h1 id="有效的括号"><a href="#有效的括号" class="headerlink" title="有效的括号"></a>有效的括号</h1><p>给定一个只包括 ‘(‘，’)’，’{‘，’}’，’[‘，’]’ 的字符串，判断字符串是否有效。</p>
+<p>有效字符串需满足：</p>
+<ol>
+<li>左括号必须用相同类型的右括号闭合。</li>
+<li>左括号必须以正确的顺序闭合。</li>
+</ol>
+<p>注意空字符串可被认为是有效字符串。</p>
 <p><strong>示例 1:</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: s = <span class="string">"anagram"</span>, t = <span class="string">"nagaram"</span></span><br><span class="line">输出: <span class="keyword">true</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: <span class="string">"()"</span></span><br><span class="line">输出: <span class="keyword">true</span></span><br></pre></td></tr></table></figure>
 
 <a id="more"></a>
 <p><strong>示例 2:</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: s = <span class="string">"rat"</span>, t = <span class="string">"car"</span></span><br><span class="line">输出: <span class="keyword">false</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: <span class="string">"()[]&#123;&#125;"</span></span><br><span class="line">输出: <span class="keyword">true</span></span><br></pre></td></tr></table></figure>
 
-<p><strong>说明:</strong><br>你可以假设字符串只包含小写字母。</p>
-<h2 id="解题："><a href="#解题：" class="headerlink" title="解题："></a>解题：</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isAnagram</span><span class="params">(String s, String t)</span> </span>&#123;</span><br><span class="line">       <span class="keyword">char</span>[] arr1 = s.toCharArray();</span><br><span class="line">        <span class="keyword">char</span>[] arr2 = t.toCharArray();</span><br><span class="line">        <span class="keyword">if</span>(arr1.length!=arr2.length)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span>[] count = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">26</span>];</span><br><span class="line">        <span class="keyword">int</span> index=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;arr1.length;i++)&#123;</span><br><span class="line">            index = arr1[i] - <span class="string">'a'</span>;</span><br><span class="line">            count[index]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;arr2.length;i++)&#123;</span><br><span class="line">            index = arr2[i] - <span class="string">'a'</span>;</span><br><span class="line">            count[index] --;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span> ;i&lt;count.length;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(count[i]!=<span class="number">0</span>)&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>示例 3:</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: <span class="string">"(]"</span></span><br><span class="line">输出: <span class="keyword">false</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 4:</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: <span class="string">"([)]"</span></span><br><span class="line">输出: <span class="keyword">false</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 5:</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: <span class="string">"&#123;[]&#125;"</span></span><br><span class="line">输出: <span class="keyword">true</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h1><p><strong>本题有两个难点：</strong></p>
+<ol>
+<li>如何遍历</li>
+<li>左右括号如何存储</li>
+</ol>
+<p><strong>思路：</strong></p>
+<ol>
+<li>我们可以用Hash表来存储一对括号</li>
+<li>循环遍历字符串，每次以一个char字符进行操作</li>
+<li>运用Stack数据结构解题</li>
+</ol>
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">isValid</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">        Map&lt;Character,Character&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        map.put(<span class="string">')'</span>,<span class="string">'('</span>);</span><br><span class="line">        map.put(<span class="string">']'</span>,<span class="string">'['</span>);</span><br><span class="line">        map.put(<span class="string">'&#125;'</span>,<span class="string">'&#123;'</span>);</span><br><span class="line">        Stack&lt;Character&gt; stack = <span class="keyword">new</span> Stack&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;s.length();i++)&#123;</span><br><span class="line">            <span class="keyword">char</span> c = s.charAt(i);</span><br><span class="line">            <span class="keyword">if</span>(map.containsKey(c))&#123;</span><br><span class="line">                <span class="keyword">if</span>(stack.isEmpty())&#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span>(map.get(c)!=stack.pop())&#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">                stack.push(c);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> stack.isEmpty();</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p><del>这是我写的代码，确实有一种年轻的味道！</del></p>
+<p><strong>下面是官方的解：</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Hash table that takes care of the mappings.</span></span><br><span class="line">    <span class="keyword">private</span> HashMap&lt;Character, Character&gt; mappings;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Initialize hash map with mappings. This simply makes the code easier to read.</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Solution</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.mappings = <span class="keyword">new</span> HashMap&lt;Character, Character&gt;();</span><br><span class="line">        <span class="keyword">this</span>.mappings.put(<span class="string">')'</span>, <span class="string">'('</span>);</span><br><span class="line">        <span class="keyword">this</span>.mappings.put(<span class="string">'&#125;'</span>, <span class="string">'&#123;'</span>);</span><br><span class="line">        <span class="keyword">this</span>.mappings.put(<span class="string">']'</span>, <span class="string">'['</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isValid</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Initialize a stack to be used in the algorithm.</span></span><br><span class="line">        Stack&lt;Character&gt; stack = <span class="keyword">new</span> Stack&lt;Character&gt;();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; s.length(); i++) &#123;</span><br><span class="line">            <span class="keyword">char</span> c = s.charAt(i);</span><br><span class="line"></span><br><span class="line">            <span class="comment">// If the current character is a closing bracket.</span></span><br><span class="line">            <span class="keyword">if</span> (<span class="keyword">this</span>.mappings.containsKey(c)) &#123;</span><br><span class="line"></span><br><span class="line">                <span class="comment">// Get the top element of the stack. If the stack is empty, set a dummy value of '#'</span></span><br><span class="line">                <span class="keyword">char</span> topElement = stack.empty() ? <span class="string">'#'</span> : stack.pop();</span><br><span class="line"></span><br><span class="line">                <span class="comment">// If the mapping for this bracket doesn't match the stack's top element, return false.</span></span><br><span class="line">                <span class="keyword">if</span> (topElement != <span class="keyword">this</span>.mappings.get(c)) &#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="comment">// If it was an opening bracket, push to the stack.</span></span><br><span class="line">                stack.push(c);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// If the stack still contains elements, then it is an invalid expression.</span></span><br><span class="line">        <span class="keyword">return</span> stack.isEmpty();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
       
 
       
@@ -210,11 +241,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">字符串</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">数组</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">stack</a>
         		</li>
       		
 		</ul>
@@ -281,7 +308,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/09/16/有效的字母异位词/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/09/17/有效的括号/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -295,18 +322,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/09/17/分类test/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          分类test
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/09/09/Just-for-test/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">线程安全</div>
+    <a href="/2019/09/17/article/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">article</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -333,7 +351,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#有效的字母异位词"><span class="toc-number">1.</span> <span class="toc-text">有效的字母异位词</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#解题："><span class="toc-number">1.1.</span> <span class="toc-text">解题：</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#有效的括号"><span class="toc-number">1.</span> <span class="toc-text">有效的括号</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Solution"><span class="toc-number">2.</span> <span class="toc-text">Solution</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Code"><span class="toc-number">2.1.</span> <span class="toc-text">Code</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
