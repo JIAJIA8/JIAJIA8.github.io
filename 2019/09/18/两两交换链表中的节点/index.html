@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="JIAJIA">
 <meta property="og:description" content="两两交换链表中的节点给定一个链表，两两交换其中相邻的节点，并返回交换后的链表。 你不能只是单纯的改变节点内部的值，而是需要实际的进行节点交换。 示例: 1给定 1-&amp;gt;2-&amp;gt;3-&amp;gt;4, 你应该返回 2-&amp;gt;1-&amp;gt;4-&amp;gt;3.">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-18T14:06:08.901Z">
+<meta property="og:updated_time" content="2019-09-19T14:43:24.522Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="两两交换链表中的节点（LeetCode-24）">
 <meta name="twitter:description" content="两两交换链表中的节点给定一个链表，两两交换其中相邻的节点，并返回交换后的链表。 你不能只是单纯的改变节点内部的值，而是需要实际的进行节点交换。 示例: 1给定 1-&amp;gt;2-&amp;gt;3-&amp;gt;4, 你应该返回 2-&amp;gt;1-&amp;gt;4-&amp;gt;3.">
@@ -182,7 +182,7 @@
 </ol>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">swapPairs</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(head==<span class="keyword">null</span> || head.next==<span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> head;</span><br><span class="line">        &#125;</span><br><span class="line">        ListNode next = head.next;</span><br><span class="line">        head.next = swapPairs(next.next);</span><br><span class="line">        next.next = head;</span><br><span class="line">        <span class="keyword">return</span> next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<pre><code class="这样看起来是不是很简洁呢~~~"></code></pre>
+<p><del>这样看起来是不是很简洁呢</del></p>
 
       
 
@@ -301,6 +301,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2019/09/19/K个一组翻转链表/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          K个一组翻转链表（LeetCode-25）
+        
+      </div>
+    </a>
   
   
     <a href="/2019/09/17/有效的括号/" id="article-nav-older" class="article-nav-link-wrap">
